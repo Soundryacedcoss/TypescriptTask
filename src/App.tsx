@@ -1,24 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import { RandomeFunctional } from './randomFunctional';
+import { ErrorBoundary } from 'react-error-boundary';
+import { ErrorPageFunctinol } from './ErrorPageFunctinol';
+import { MyComponant } from './MyComponant';
+import { ProductDetail } from './ProductDetail';
+import data from './Data';
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>Typescript</h2>
+      <h3>Q2. Random number generation using functional component</h3>
+      <ErrorBoundary fallback={<ErrorPageFunctinol />}>
+        <RandomeFunctional />
+      </ErrorBoundary>
+      <hr />
+      <h3>Q3. React app with typescript</h3>
+      <MyComponant name="Lucky" age={21} logedIn={true} />
+      <hr />
+      <h3>Q4. Pass product details and print</h3>
+      <ProductDetail detail={data} />
     </div>
   );
 }
