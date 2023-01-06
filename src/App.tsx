@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <h2>Typescript</h2>
-      <h3>Q2. Random number generation using functional component</h3>
+      <h3>Q1 and Q2. Random number generation using functional component</h3>
       <ErrorBoundary fallback={<ErrorPageFunctinol />}>
         <RandomeFunctional />
       </ErrorBoundary>
